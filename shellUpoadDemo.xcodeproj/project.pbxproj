@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		606B19B38F25911F9A60DC43 /* libPods-shellUpoadDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F6B6677B4E3B509082D876 /* libPods-shellUpoadDemo.a */; };
+		D4C6ED7623682140008DF726 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C6ED7523682140008DF726 /* AppDelegate.m */; };
+		D4C6ED7923682140008DF726 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C6ED7823682140008DF726 /* SceneDelegate.m */; };
+		D4C6ED7C23682140008DF726 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C6ED7B23682140008DF726 /* ViewController.m */; };
+		D4C6ED7F23682140008DF726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C6ED7D23682140008DF726 /* Main.storyboard */; };
+		D4C6ED8123682144008DF726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C6ED8023682144008DF726 /* Assets.xcassets */; };
+		D4C6ED8423682144008DF726 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C6ED8223682144008DF726 /* LaunchScreen.storyboard */; };
+		D4C6ED8723682144008DF726 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C6ED8623682144008DF726 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4E24BC0CDDDC1CD73FA19130 /* Pods-shellUpoadDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shellUpoadDemo.release.xcconfig"; path = "Target Support Files/Pods-shellUpoadDemo/Pods-shellUpoadDemo.release.xcconfig"; sourceTree = "<group>"; };
+		81F6B6677B4E3B509082D876 /* libPods-shellUpoadDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-shellUpoadDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C6ED7123682140008DF726 /* 买乐购.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "买乐购.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C6ED7423682140008DF726 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D4C6ED7523682140008DF726 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D4C6ED7723682140008DF726 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		D4C6ED7823682140008DF726 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		D4C6ED7A23682140008DF726 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D4C6ED7B23682140008DF726 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D4C6ED7E23682140008DF726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4C6ED8023682144008DF726 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4C6ED8323682144008DF726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4C6ED8523682144008DF726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4C6ED8623682144008DF726 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D976BA30EE7839E54242EB8F /* Pods-shellUpoadDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shellUpoadDemo.debug.xcconfig"; path = "Target Support Files/Pods-shellUpoadDemo/Pods-shellUpoadDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4C6ED6E23682140008DF726 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				606B19B38F25911F9A60DC43 /* libPods-shellUpoadDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		360D3A77E2160CAFEE9C2D37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81F6B6677B4E3B509082D876 /* libPods-shellUpoadDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E533163DCA7026558CDFB10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D976BA30EE7839E54242EB8F /* Pods-shellUpoadDemo.debug.xcconfig */,
+				4E24BC0CDDDC1CD73FA19130 /* Pods-shellUpoadDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D4C6ED6823682140008DF726 = {
+			isa = PBXGroup;
+			children = (
+				D4C6ED7323682140008DF726 /* shellUpoadDemo */,
+				D4C6ED7223682140008DF726 /* Products */,
+				9E533163DCA7026558CDFB10 /* Pods */,
+				360D3A77E2160CAFEE9C2D37 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D4C6ED7223682140008DF726 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4C6ED7123682140008DF726 /* 买乐购.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4C6ED7323682140008DF726 /* shellUpoadDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D4C6ED7423682140008DF726 /* AppDelegate.h */,
+				D4C6ED7523682140008DF726 /* AppDelegate.m */,
+				D4C6ED7723682140008DF726 /* SceneDelegate.h */,
+				D4C6ED7823682140008DF726 /* SceneDelegate.m */,
+				D4C6ED7A23682140008DF726 /* ViewController.h */,
+				D4C6ED7B23682140008DF726 /* ViewController.m */,
+				D4C6ED7D23682140008DF726 /* Main.storyboard */,
+				D4C6ED8023682144008DF726 /* Assets.xcassets */,
+				D4C6ED8223682144008DF726 /* LaunchScreen.storyboard */,
+				D4C6ED8523682144008DF726 /* Info.plist */,
+				D4C6ED8623682144008DF726 /* main.m */,
+			);
+			path = shellUpoadDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4C6ED7023682140008DF726 /* shellUpoadDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4C6ED8A23682144008DF726 /* Build configuration list for PBXNativeTarget "shellUpoadDemo" */;
+			buildPhases = (
+				04A50854B3DF967172FF27CA /* [CP] Check Pods Manifest.lock */,
+				D4C6ED6D23682140008DF726 /* Sources */,
+				D4C6ED6E23682140008DF726 /* Frameworks */,
+				D4C6ED6F23682140008DF726 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = shellUpoadDemo;
+			productName = shellUpoadDemo;
+			productReference = D4C6ED7123682140008DF726 /* 买乐购.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4C6ED6923682140008DF726 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = sherwin.chen;
+				TargetAttributes = {
+					D4C6ED7023682140008DF726 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = D4C6ED6C23682140008DF726 /* Build configuration list for PBXProject "shellUpoadDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4C6ED6823682140008DF726;
+			productRefGroup = D4C6ED7223682140008DF726 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4C6ED7023682140008DF726 /* shellUpoadDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4C6ED6F23682140008DF726 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C6ED8423682144008DF726 /* LaunchScreen.storyboard in Resources */,
+				D4C6ED8123682144008DF726 /* Assets.xcassets in Resources */,
+				D4C6ED7F23682140008DF726 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04A50854B3DF967172FF27CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-shellUpoadDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4C6ED6D23682140008DF726 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C6ED7C23682140008DF726 /* ViewController.m in Sources */,
+				D4C6ED7623682140008DF726 /* AppDelegate.m in Sources */,
+				D4C6ED8723682144008DF726 /* main.m in Sources */,
+				D4C6ED7923682140008DF726 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4C6ED7D23682140008DF726 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4C6ED7E23682140008DF726 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4C6ED8223682144008DF726 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4C6ED8323682144008DF726 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4C6ED8823682144008DF726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D4C6ED8923682144008DF726 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4C6ED8B23682144008DF726 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D976BA30EE7839E54242EB8F /* Pods-shellUpoadDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2019.1031.1650;
+				DEVELOPMENT_TEAM = J9L66M2KMX;
+				INFOPLIST_FILE = shellUpoadDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmt.wallet;
+				PRODUCT_NAME = "买乐购";
+				PROVISIONING_PROFILE_SPECIFIER = mmlg_dev;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D4C6ED8C23682144008DF726 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E24BC0CDDDC1CD73FA19130 /* Pods-shellUpoadDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2019.1031.1650;
+				DEVELOPMENT_TEAM = J9L66M2KMX;
+				INFOPLIST_FILE = shellUpoadDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.1.6;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmt.wallet;
+				PRODUCT_NAME = "买乐购";
+				PROVISIONING_PROFILE_SPECIFIER = mmlg_Pro;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4C6ED6C23682140008DF726 /* Build configuration list for PBXProject "shellUpoadDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C6ED8823682144008DF726 /* Debug */,
+				D4C6ED8923682144008DF726 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4C6ED8A23682144008DF726 /* Build configuration list for PBXNativeTarget "shellUpoadDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C6ED8B23682144008DF726 /* Debug */,
+				D4C6ED8C23682144008DF726 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4C6ED6923682140008DF726 /* Project object */;
+}

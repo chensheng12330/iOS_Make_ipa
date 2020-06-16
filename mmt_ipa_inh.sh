@@ -69,7 +69,7 @@ WorkPath="${ShellPath}/"
 cd "${ShellPath}"
 
 #编译模式  Debug & Release
-Configuration="BETA"
+Configuration="Release"
 
 put_error '\n----------------------------------------------------
 |    买买提iOS APP打包工具

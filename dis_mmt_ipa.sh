@@ -22,12 +22,17 @@ G_apiMail="mmlg@tibethuirong.com"
 function showErrorNoti(){
   osascript -e 'display notification "脚本执行失败,请关注！" with title "😂😂😂😂"'
 }
+#输出错误信息(字符串)
 function put_error() {
+  echo -e "\033[1;31m$1 \033[0m"
 }
-
+#输出警告信息(字符串)
 function put_warning() {
+  echo -e "\033[1;33m$1 \033[0m"
 }
+#输出提示信息(字符串)
 function put_prompt() {
+  echo -e "\033[1;32m$1 \033[0m"
 }
 
 date_start=`date +%s`
@@ -41,13 +46,16 @@ WorkPath="${ShellPath}/"
 #编译模式  Debug & Release
 Configuration="Release"
 
-echo -e '\n----------------------------------------------------'
-echo '   买买提iOS APP上线工具 v1.0 20191029 by 陈胜/Sherwin'
-echo -e '----------------------------------------------------\n'
+put_error '\n----------------------------------------------------
+|    买买提iOS APP上线工具
+|    v1.0 20191029
+|    Create by 陈胜.Sherwin
+----------------------------------------------------\n'
+
+put_prompt "\n==>(0x01)-->获取工程基本信息...
+----------------------------------------------------"
 
 
-echo -e "\n==>(0x01)-->获取工程基本信息..."
-echo '----------------------------------------------------'
 # 读取项目的当前工程的配置信息
 #获取app显示名称
 projectBuildSettings=$(xcodebuild -showBuildSettings)
@@ -68,21 +76,22 @@ APP_TARGETNAME=$(echo "${projectBuildSettings}" | grep TARGETNAME | head -1 | aw
 BuildTargetName=$APP_TARGETNAME
 
 
-echo "APP_TARGETNAME: ${APP_TARGETNAME}"
-echo "APP_DisplayName: ${APP_DisplayName}"
-echo "APP_BVersion: ${APP_BVersion}"
-echo "APP_Version: ${APP_Version}"
+put_warning "APP_TARGETNAME: ${APP_TARGETNAME}
+APP_DisplayName: ${APP_DisplayName}
+APP_BVersion: ${APP_BVersion}
+APP_Version: ${APP_Version}"
 
-echo "(0x01)  √   NICE WORK."
-echo ""
+put_prompt "==>(0x01)  √   NICE WORK.\n"
+
 
 # 拷贝项目代码到工作目录
 cd "${ShellPath}"
 TEMP_F="temp"
 
 ###工程配置文件路径
-echo -e "\n==>(0x02)-->配置工程文件路径..."
-echo '----------------------------------------------------'
+put_prompt "\n==>(0x02)-->配置工程文件路径...
+----------------------------------------------------"
+
 #cd "${TEMP_F}"
 #获取当前工程名称.
 project_path="${ShellPath}"
@@ -95,14 +104,14 @@ mkdir -p "${result_path}"
 
 if [ ! -e "${project_name}.xcodeproj" ]; then
   showErrorNoti
-  echo "--> ERROR-错误401：找不到需要编译的工程,SO? 编译APP中断."
+  put_error "--> ERROR-错误401：找不到需要编译的工程,SO? 编译APP中断."
   exit 401
 fi
 
-echo "project_name: ${project_name}"
-echo "result_path:  ${result_path}"
-echo "(0x02)  √   NICE WORK."
-echo ""
+put_warning "project_name: ${project_name}
+result_path:  ${result_path}"
+
+put_prompt "==>(0x02)  √   NICE WORK.\n"
 
 # 编译打包
 
@@ -120,26 +129,29 @@ exportOptionsPlist="${ShellPath}/iOSArchivefile/AppStoreExportOptions.plist"
 
 
 #clean project.
-echo -e "\n==>(0x03)-->开始清理工程,请稍等..."
-echo '----------------------------------------------------'
+put_prompt "\n==>(0x03)-->开始清理工程,请稍等...
+----------------------------------------------------\n"
+
+
 xcodebuild clean \
 -workspace "${ShellPath}/${project_name}".xcworkspace  \
 -scheme "${BuildTargetName}" \
 -configuration "${Configuration}"
 if [[ $? != 0 ]]; then
     showErrorNoti
-  　echo "--> ERROR-错误401：清理工程失败,请检查工程,SO? 编译APP中断."
+  　put_error "--> ERROR-错误401：清理工程失败,请检查工程,SO? 编译APP中断."
   　exit 401
 fi
 
-echo "(0x03)  √   NICE WORK."
-echo ""
+put_prompt "==>(0x03)  √   NICE WORK.\n"
 
 
 #编译工程
-echo -e "\n==>(0x04)-->开始编译，耗时操作,请稍等..."
-echo '----------------------------------------------------'
-echo "${project_name}"
+put_prompt "\n==>(0x04)-->开始编译，耗时操作,请稍等...
+----------------------------------------------------"
+put_warning "project_name: ${project_name}
+BuildTargetName: ${BuildTargetName}
+Configuration:  ${Configuration}"
 
 #🕹😍😍😍打包，制作xcarchive文件，用于后续bug查看.clean build
 xcodebuild  archive -quiet \
@@ -150,18 +162,23 @@ xcodebuild  archive -quiet \
 
 #判断是否存档成功.
 if [ -e ${archivePath} ]; then
-    echo "(0x04)  √  NICE WORK. 工程编译完成."
-    echo ""
+    put_prompt "\n==>(0x04)  √  NICE WORK. 工程编译完成.\n"
 else
   showErrorNoti
-  echo "--> ERROR-错误501：编译工程失败,请认真检查工程配置."
+  put_error "--> ERROR-错误501：编译工程失败,请认真检查工程配置."
   exit 500
 fi
 
 
 #🕹😍😍😍导出ipa包
-echo -e "\n==>(0x05)-->🕹🕹🕹开始导出IPA包，耗时操作,请稍等..."
-echo '----------------------------------------------------'
+
+put_prompt "\n==>(0x05)-->🕹🕹🕹开始导出IPA包，耗时操作,请稍等...
+----------------------------------------------------"
+
+put_warning "archivePath: ${archivePath}
+IPA_DIR_PATH: ${IPA_DIR_PATH}
+exportOptionsPlist:  ${exportOptionsPlist}"
+
 xcodebuild -exportArchive \
 -archivePath "${archivePath}" \
 -exportPath "${IPA_DIR_PATH}" \
@@ -170,12 +187,12 @@ xcodebuild -exportArchive \
 #判断是否导出成功.
 if [ -e ${IPA_DIR_PATH} ]; then
     osascript -e 'display notification "AppStrore生产打包成功！" with title "😍😍😍"'
-    echo "(0x05)  √  NICE WORK. ipa包导出成功."
+    put_prompt "\n==>(0x05)  √  NICE WORK. ipa包导出成功.\n"
     #open "${IPA_DIR_PATH}"
     #open -a Transporter.app
 else
     showErrorNoti
-    echo "--> ERROR-错误501：导出IPA失败,请认真检查工程配置."
+    put_error "--> ERROR-错误501：导出IPA失败,请认真检查工程配置."
     exit 1
 fi
 
@@ -186,29 +203,30 @@ fi
 
 #--verbose
 #🕹😍😍😍较验 app状态(机审)
-echo -e "\n==>(0x06)-->🕹🕹🕹开始较验IPA包，联网耗时操作,请稍等..."
-echo '----------------------------------------------------'
-echo "IPA_PATH: ${IPA_PATH}"
-echo "G_apiMail: ${G_apiMail}"
-echo "G_apiPwd:  ${G_apiPwd}"
-echo -e '----------------------------------------------------\n'
+put_prompt "\n==>(0x06)-->🕹🕹🕹开始较验IPA包，联网耗时操作,请稍等...
+----------------------------------------------------"
+
+put_warning "IPA_PATH: ${IPA_PATH}
+G_apiMail: ${G_apiMail}
+G_apiPwd:  ${G_apiPwd}
+----------------------------------------------------\n"
 
 validateInfo=$(xcrun altool --validate-app -f "${IPA_PATH}" -u $G_apiMail -p $G_apiPwd --output-format xml )
 
 #判断较验是否成功
 requestCode=$(echo "${validateInfo}" | grep 'product-errors')
 if [ -n "$requestCode" ]; then
-    echo "==>(0x06) 较验失败,请详细检测apple反馈数据包."
-    echo "$validateInfo"
+    put_error "==>(0x06) 较验失败,请详细检测apple反馈数据包."
+    put_error "$validateInfo"
     exit 401
 fi
 
-echo "(0x06)  √  NICE WORK. ipa包较验成功."
+put_prompt "==>(0x06)  √  NICE WORK. ipa包较验成功."
 
 
 #🕹😍😍😍上传IPA
-echo -e "\n==>(0x07)-->🕹🕹🕹开始上传IPA包，联网耗时操作,请稍等..."
-echo '----------------------------------------------------'
+put_prompt "\n==>(0x07)-->🕹🕹🕹开始上传IPA包，联网耗时操作,请稍等...
+----------------------------------------------------"
 
 validateInfo=$(xcrun altool --upload-app -f "${IPA_PATH}" -u $G_apiMail -p $G_apiPwd --output-format xml )
 
